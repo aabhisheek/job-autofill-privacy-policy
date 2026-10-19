@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="Privacy Policy for the Job Autofill browser extension. Learn what information the extension handles, how it is used, and how to contact the developer.">
+  <title>Privacy Policy — Job Autofill Extension</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --page: #f4f7fb;
+      --surface: #ffffff;
+      --text: #182230;
+      --muted: #596579;
+      --border: #e1e7ef;
+      --accent: #2563eb;
+      --accent-soft: #eaf1ff;
+      --shadow: 0 18px 55px rgba(21, 34, 56, .09);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --page: #0b1120;
+        --surface: #111a2b;
+        --text: #edf2fb;
+        --muted: #a8b5c9;
+        --border: #26344b;
+        --accent: #8bb4ff;
+        --accent-soft: #172b4d;
+        --shadow: 0 18px 55px rgba(0, 0, 0, .24);
+      }
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(ellipse at 10% 0%, rgba(37, 99, 235, .10), transparent 38rem),
+        var(--page);
+      color: var(--text);
+      font: 16px/1.75 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--accent); text-underline-offset: 3px; }
+    a:focus-visible, button:focus-visible {
+      outline: 3px solid var(--accent);
+      outline-offset: 3px;
+    }
+
+    .site-header {
+      border-bottom: 1px solid var(--border);
+      background: color-mix(in srgb, var(--surface) 88%, transparent);
+    }
+
+    .header-inner, main, .site-footer {
+      width: min(100% - 36px, 900px);
+      margin-inline: auto;
+    }
+
+    .header-inner {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 750;
+      letter-spacing: -.025em;
+    }
+
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      flex: 0 0 auto;
+      border-radius: 13px;
+      color: white;
+      background: linear-gradient(135deg, #2563eb, #6d5ce8);
+      box-shadow: 0 7px 18px rgba(37, 99, 235, .24);
+    }
+
+    .brand-mark svg { width: 23px; height: 23px; }
+
+    .header-note {
+      color: var(--muted);
+      font-size: .84rem;
+      text-align: right;
+    }
+
+    main { padding-block: 48px 64px; }
+
+    .hero {
+      padding: clamp(26px, 6vw, 54px);
+      margin-bottom: 24px;
+      border: 1px solid var(--border);
+      border-radius: 26px;
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 5px 11px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      color: var(--accent);
+      background: var(--accent-soft);
+      font-size: .78rem;
+      font-weight: 750;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 19px 0 12px;
+      max-width: 720px;
+      font-size: clamp(2rem, 5.5vw, 3.45rem);
+      line-height: 1.12;
+      letter-spacing: -.055em;
+    }
+
+    .hero p {
+      max-width: 690px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    .meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 18px;
+      margin-top: 25px;
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+    .meta-row span { display: inline-flex; align-items: center; gap: 7px; }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 210px minmax(0, 1fr);
+      align-items: start;
+      gap: 24px;
+    }
+
+    .toc {
+      position: sticky;
+      top: 20px;
+      padding: 19px 16px;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: var(--surface);
+    }
+
+    .toc h2 {
+      margin: 0 0 10px;
+      font-size: .78rem;
+      letter-spacing: .09em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .toc a {
+      display: block;
+      padding: 7px 8px;
+      border-radius: 8px;
+      color: var(--muted);
+      font-size: .88rem;
+      line-height: 1.4;
+      text-decoration: none;
+    }
+
+    .toc a:hover, .toc a:focus-visible {
+      color: var(--accent);
+      background: var(--accent-soft);
+    }
+
+    .policy {
+      min-width: 0;
+      padding: clamp(22px, 4vw, 40px);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+
+    .policy section { scroll-margin-top: 24px; }
+    .policy section + section {
+      margin-top: 30px;
+      padding-top: 27px;
+      border-top: 1px solid var(--border);
+    }
+
+    .policy h2 {
+      margin: 0 0 12px;
+      font-size: 1.25rem;
+      line-height: 1.35;
+      letter-spacing: -.025em;
+    }
+
+    .policy p { margin: 0 0 12px; }
+    .policy ul { margin: 10px 0 15px; padding-left: 1.35rem; }
+    .policy li { padding-left: 4px; margin: 8px 0; }
+    .policy li::marker { color: var(--accent); }
+    .policy strong { font-weight: 700; }
+
+    .contact-card {
+      padding: 18px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: var(--page);
+    }
+
+    .contact-card p:last-child { margin-bottom: 0; }
+
+    .compliance-note {
+      padding: 17px 18px;
+      border-left: 3px solid var(--accent);
+      border-radius: 0 12px 12px 0;
+      background: var(--accent-soft);
+    }
+
+    .site-footer {
+      padding: 0 0 34px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      color: var(--muted);
+      font-size: .86rem;
+    }
+
+    .back-to-top {
+      display: inline-block;
+      padding: 8px 12px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      color: var(--text);
+      background: var(--surface);
+      text-decoration: none;
+    }
+
+    @media (max-width: 720px) {
+      .header-inner, main, .site-footer { width: min(100% - 24px, 900px); }
+      .header-note { display: none; }
+      main { padding-block: 24px 38px; }
+      .layout { grid-template-columns: 1fr; gap: 16px; }
+      .toc { position: static; }
+      .toc nav { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2px 8px; }
+      .hero { border-radius: 20px; }
+      .policy { border-radius: 18px; }
+    }
+
+    @media (max-width: 380px) {
+      .toc nav { grid-template-columns: 1fr; }
+    }
+
+    @media print {
+      :root { color-scheme: light; --page: #fff; --surface: #fff; --text: #111; --muted: #444; --border: #ddd; }
+      body { background: #fff; font-size: 11pt; }
+      .site-header, .toc, .site-footer { display: none; }
+      main { width: 100%; padding: 0; }
+      .hero, .policy { box-shadow: none; border: 0; padding: 0; }
+      .hero { margin-bottom: 20px; }
+      .layout { display: block; }
+      .policy section { break-inside: avoid; }
+      a { color: inherit; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#top" aria-label="Job Autofill privacy policy home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7 7.5V5.8A1.8 1.8 0 0 1 8.8 4h6.4A1.8 1.8 0 0 1 17 5.8v1.7M5 8h14a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+            <path d="m8.5 13 2.1 2.1 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <span>Job Autofill</span>
+      </a>
+      <div class="header-note">Privacy Policy</div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="page-title">
+      <span class="eyebrow">Privacy &amp; transparency</span>
+      <h1 id="page-title">Privacy Policy</h1>
+      <p>Learn how the Job Autofill Extension handles information when you use its job application autofill and application-tracking features.</p>
+      <div class="meta-row">
+        <span><strong>Effective date:</strong> October 19, 2026</span>
+        <span><strong>Product:</strong> Job Autofill Extension</span>
+      </div>
+    </section>
+
+    <div class="layout">
+      <aside class="toc" aria-label="Policy navigation">
+        <h2>On this page</h2>
+        <nav>
+          <a href="#introduction">1. Introduction</a>
+          <a href="#information">2. Information We Handle</a>
+          <a href="#use">3. How Information Is Used</a>
+          <a href="#storage">4. Storage and Sharing</a>
+          <a href="#gmail">5. Gmail Integration</a>
+          <a href="#security">6. Security and Retention</a>
+          <a href="#third-party">7. Third-Party Websites</a>
+          <a href="#children">8. Children's Privacy</a>
+          <a href="#changes">9. Changes</a>
+          <a href="#contact">10. Contact</a>
+          <a href="#limited-use">Limited Use Compliance</a>
+        </nav>
+      </aside>
+
+      <article class="policy">
+        <section id="introduction">
+          <h2>1. Introduction</h2>
+          <p>Job Autofill (“the Extension”) helps users autofill job application forms using profile information they provide and track their job application statuses.</p>
+          <p>This Privacy Policy explains how the Extension handles user information.</p>
+        </section>
+
+        <section id="information">
+          <h2>2. Information We Handle</h2>
+          <p>Depending on the features enabled, the Extension may handle:</p>
+          <ul>
+            <li><strong>Profile information:</strong> Name, email address, phone number, skills, education, work experience, and other details saved by the user for job applications.</li>
+            <li><strong>Resume information:</strong> Resume content or file information used to populate job application forms.</li>
+            <li><strong>Job application information:</strong> Job titles, company names, application statuses, and related information used for application tracking.</li>
+            <li><strong>Webpage and form information:</strong> Information from supported job application pages that is necessary to identify and fill relevant fields.</li>
+            <li><strong>Email information:</strong> If the user enables Gmail integration, relevant email content and metadata may be accessed to categorize application confirmations, rejections, and interview invitations.</li>
+          </ul>
+          <p>The Extension handles only information necessary for its advertised features and enabled integrations.</p>
+        </section>
+
+        <section id="use">
+          <h2>3. How Information Is Used</h2>
+          <p>Information is used solely to:</p>
+          <ul>
+            <li>Autofill job application forms using user-provided profile information.</li>
+            <li>Help users prepare and manage job applications.</li>
+            <li>Track application statuses.</li>
+            <li>Categorize relevant job application emails when Gmail integration is enabled.</li>
+            <li>Provide features explicitly requested by the user.</li>
+          </ul>
+          <p>The Extension does not sell personal information or use it for personalized advertising.</p>
+        </section>
+
+        <section id="storage">
+          <h2>4. Storage and Sharing</h2>
+          <p>Profile information and application records are stored according to the Extension's actual storage configuration.</p>
+          <p>Information is not transmitted to the developer's servers or third-party services unless required by an enabled feature and disclosed to the user.</p>
+          <p>If external services are used for AI processing, cloud synchronization, authentication, or other functionality, the relevant information may be shared with those providers only as necessary to provide the requested feature.</p>
+          <p>Users should review the permissions requested by the Extension and the information displayed before submitting any job application.</p>
+        </section>
+
+        <section id="gmail">
+          <h2>5. Gmail Integration</h2>
+          <p>If Gmail integration is enabled, the Extension accesses only the information permitted by the user's authorization and required for the email-categorization feature.</p>
+          <p>Email information is used to identify job application updates, such as application acknowledgments, rejection notices, and interview invitations. It is not sold or used for advertising.</p>
+        </section>
+
+        <section id="security">
+          <h2>6. Data Security and Retention</h2>
+          <p>Reasonable measures are used to protect information handled by the Extension. Information is retained only as long as necessary for the relevant functionality or until the user deletes it, subject to applicable legal requirements.</p>
+          <p>Users should remove saved information when they no longer need it and revoke any connected account permissions they wish to withdraw.</p>
+        </section>
+
+        <section id="third-party">
+          <h2>7. Third-Party Websites</h2>
+          <p>The Extension operates on supported third-party job application websites. Those websites have their own privacy policies and data practices. Users should review the applicable policies before submitting applications.</p>
+        </section>
+
+        <section id="children">
+          <h2>8. Children's Privacy</h2>
+          <p>The Extension is intended for people seeking employment and is not designed specifically for children.</p>
+        </section>
+
+        <section id="changes">
+          <h2>9. Changes to This Policy</h2>
+          <p>This policy may be updated when the Extension's functionality or data practices change. The revised policy will be published at the same URL with an updated effective date.</p>
+        </section>
+
+        <section id="contact">
+          <h2>10. Contact</h2>
+          <p>For privacy questions or requests concerning personal information, contact:</p>
+          <div class="contact-card">
+            <p><strong>Developer:</strong> Abhishek Anand</p>
+            <p><strong>Email:</strong> <a href="mailto:anand.abhisheek@gmail.com">anand.abhisheek@gmail.com</a></p>
+          </div>
+        </section>
+
+        <section id="limited-use">
+          <h2>Chrome Web Store Limited Use Compliance</h2>
+          <p class="compliance-note">The use of information received from Google APIs will adhere to the Chrome Web Store User Data Policy, including the Limited Use requirements, where applicable.</p>
+        </section>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <span>© <span id="year">2026</span> Job Autofill. Privacy matters.</span>
+    <a class="back-to-top" href="#top">Back to top ↑</a>
+  </footer>
+
+  <script>
+    // Keep the footer year current without relying on external libraries.
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Smooth scrolling is enabled in CSS; this also supports keyboard-friendly
+    // navigation by moving focus to the selected policy section.
+    document.querySelectorAll('.toc a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        var target = document.querySelector(link.getAttribute('href'));
+        if (target) {
+          target.setAttribute('tabindex', '-1');
+          target.focus({ preventScroll: true });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
